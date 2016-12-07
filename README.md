@@ -10,23 +10,23 @@ The wrapper includes:
 
 ##Usage
 
-1. Install this module 
+#####1. Install this module 
 ```
 bower install angular-simple-statistics
 ```
 
-2. Include the dependencies in your index.html file:
+#####2. Include the dependencies in your index.html file:
 ```html
 <script src="bower_components/simple-statistics/dist/simple-statistics.min.js"></script>
 <script src="bower_components/angular-simple-statistic/dist/angular-simple-statistics.min.js"></script>
 ```
 
-3. Include the dependencies in your module's definition.
+#####3. Include the dependencies in your module's definition.
 ```javascript
 angular.module('myModule', ['cabargues.angularSimpleStatistics']);
 ```
 
-4. Inject the factory and use it in your controllers, factories, filters, etc.
+#####4. Inject the factory and use it in your controllers, factories, filters, etc.
 More info about Simple Statistics methods can be found here: http://simplestatistics.org/docs/
  ```javascript
  angular
@@ -37,7 +37,8 @@ More info about Simple Statistics methods can be found here: http://simplestatis
   }])
  ```
  
- 5. Use the Simple Statistics methods as a filter in your templates. Currently only those methods requiring one single argument are supported. 
+ #####5. Use the Simple Statistics methods as a filter in your templates. 
+ Currently only those methods requiring one single argument are supported. 
  ```html
  <span>{{[1, 2, 3] | ss: 'standardDeviation' }}</span>
  <span>{{ $ctrl.array | ss: 'geometricMean' }}</span>
