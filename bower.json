@@ -1,0 +1,33 @@
+{
+  "name": "angular-distributalbe-module-seed",
+  "version": "0.0.1",
+  "description": "Super simple angular seed project to create distributable modules.",
+  "authors": [
+    "cabargues <carlos.abargues@gmail.com>"
+  ],
+  "private": "false",
+  "license": "MIT",
+  "homepage": "angular-distributalbe-module-seed",
+  "main": "./dist/angular-distributalbe-module-seed.js",
+  "repository": {
+    "type": "git",
+    "url": "angular-distributalbe-module-seed"
+  },
+  "keywords": [
+    "angular",
+    "distributable",
+    "seed"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
+    "jquery": "^3.1.1"
+  }
+}
