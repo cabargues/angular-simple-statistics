@@ -1,6 +1,6 @@
 {
   "name": "angular-simple-statistics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular wrapper for simple-statistics library.",
   "authors": [
     "cabargues <carlos.abargues@gmail.com>"
