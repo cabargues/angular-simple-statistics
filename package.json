@@ -1,6 +1,6 @@
 {
   "name": "angular-simple-statistics",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular wrapper for simple-statistics library.",
   "main": "./dist/angular-simple-statistics.js",
   "repository": {
