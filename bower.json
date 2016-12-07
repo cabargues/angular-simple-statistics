@@ -5,7 +5,6 @@
   "authors": [
     "cabargues <carlos.abargues@gmail.com>"
   ],
-  "private": "false",
   "license": "MIT",
   "homepage": "angular-simple-statistics",
   "main": "./dist/angular-simple-statistics.js",
