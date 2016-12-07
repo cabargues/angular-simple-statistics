@@ -37,7 +37,7 @@ More info about Simple Statistics methods can be found here: http://simplestatis
   }])
  ```
  
- #####5. Use the Simple Statistics methods as a filter in your templates. 
+#####5. Use the Simple Statistics methods as a filter in your templates. 
  Currently only those methods requiring one single argument are supported. 
  ```html
  <span>{{[1, 2, 3] | ss: 'standardDeviation' }}</span>
