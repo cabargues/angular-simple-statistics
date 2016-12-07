@@ -4,9 +4,10 @@
 module.exports = {
 
   srcJs: [
-
-    'src/**/*.js',
-    '!src/**/*.spec.js',
+    'src/angular-simple-statistics.js',
+    'src/angular-simple-statistics.factory.js',
+    'src/angular-simple-statistics.filter.js',
+    '!test/**/*.spec.js',
     '!./node_modules/**',
     '!./bower_components/**'
   ],
@@ -22,8 +23,8 @@ module.exports = {
   ],
   tests: 'src/**/*.spec.js',
   buildFolder: 'dist',
-  buildJsFilename: 'angular-distributable-module-seed.js',
-  buildCssFilename: 'angular-distributable-module-seed.css',
+  buildJsFilename: 'angular-simple-statistics.js',
+  buildCssFilename: 'angular-simple-statistics.css',
   banner: '/*!\n' +
   ' * See LICENSE in this repository for license information\n' +
   ' */\n',

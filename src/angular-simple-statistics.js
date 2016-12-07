@@ -1,13 +1,13 @@
 /**
  * Created by cabargues on 6/12/16.
  *
- * Description
+ * Module definition
  *
  */
 (function() {
   'use strict';
 
   angular
-    .module('cabargues.angularDistributableModuleSeed', []);
+    .module('cabargues.angularSimpleStatistics', []);
 
 })();

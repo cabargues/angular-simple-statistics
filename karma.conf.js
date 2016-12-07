@@ -16,7 +16,10 @@ module.exports = function (config) {
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'src/**/*.js',
+      'node_modules/simple-statistics/dist/simple-statistics.js',
+      'src/angular-simple-statistics.js',
+      'src/angular-simple-statistics.factory.js',
+      'src/angular-simple-statistics.filter.js',
       'test/**/*.js'
     ],
 

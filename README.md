@@ -1,54 +1,48 @@
-angular-distributable-module-seed
+angular-simple-statistics
 =======
 
-Super simple angular project seed to create distributable modules.
+[![Build Status](https://travis-ci.org/cabargues/angular-simple-statistics.svg?branch=master)](https://travis-ci.org/cabargues/angular-simple-statistics)
+
+Angular wrapper for Simple Statistics library (http://simplestatistics.org/).
+The wrapper includes:
+- A factory to expose all library methods that can be injected and use it in "the angular way".
+- A filter to use (some of) Simple Statistics methods directly in your templates.
 
 ##Usage
 
-
-#####1. Clone the git repo or download the code.
+1. Install this module 
 ```
-git clone https://www.github.com/cabargues/angular-distributable-module-seed
-```
-
-#####2. Install the dependencies.
-```
-npm install
-```
-Don't worry about bower dependencies. Their installation is specified in npm's `postinstall` script.
-If you want to install additional dependencies use `bower install` or `npm install --save-dev`.
-
-#####3. Create your unit tests.
-Place all your Jasmine unit tests under `/test` so Karma can find and run them.
-
-#####4. Code, code, code. 
-Replace module name, description and others in source code, `package.json` and bower.json` and start coding your module.
-
-#####4. Test your code.
-Karma configuration is defined in karma.conf.js and can be customized as required. Once ready just run:
-```
-npm test
-```
-or 
-```
-karma start
-```
-Keep in mind that `singleRun` is set to `true` to avoid problems with Travis CI.
-
-#####5. Build.
-You can customize your build process by modifying `gulpfile.js` and `build.conf.js`. When ready you can manually trigger the build process by executing: 
-
-```
-npm run-script build
-```
-or 
-```
-gulp build
+bower install angular-simple-statistics
 ```
 
-The project also includes a `.travis.yml to easily connect your repo with Travis CI and automate your builds which is cool, free and saves your time.
+2. Include the dependencies in your index.html file:
+```html
+<script src="bower_components/simple-statistics/dist/simple-statistics.min.js"></script>
+<script src="bower_components/angular-simple-statistic/dist/angular-simple-statistics.min.js"></script>
+```
 
-#####6. Share your module
-You can share your work in many different ways but maybe the better one is using bower and/or npm.
-If you want to publish your module to either bower or npm you can follow this great guide about how to do it properly:
-https://www.viget.com/articles/publishing-packages-to-npm-and-bower
+3. Include the dependencies in your module's definition.
+```javascript
+angular.module('myModule', ['cabargues.angularSimpleStatistics']);
+```
+
+4. Inject the factory and use it in your controllers, factories, filters, etc.
+More info about Simple Statistics methods can be found here: http://simplestatistics.org/docs/
+ ```javascript
+ angular
+  .module('myModule')
+  .controller('myCtrl', ['ss', function(ss) {
+    this.minValue = ss.min([1, 2, 3]);
+    
+  }])
+ ```
+ 
+ 5. Use the Simple Statistics methods as a filter in your templates. Currently only those methods requiring one single argument are supported. 
+ ```html
+ <span>{{[1, 2, 3] | ss: 'standardDeviation' }}</span>
+ <span>{{ $ctrl.array | ss: 'geometricMean' }}</span>
+ ```
+ 
+ 
+ 
+ 

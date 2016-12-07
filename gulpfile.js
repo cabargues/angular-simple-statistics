@@ -19,20 +19,6 @@ gulp.task('clean', function (cb) {
 });
 
 
-/////////////////////////////////////////////////////////////////////////////////////
-//
-// runs sass, creates css source maps
-//
-/////////////////////////////////////////////////////////////////////////////////////
-
-gulp.task('build-css', ['clean'], function() {
-  return gulp.src(config.srcSass)
-    .pipe(plugins.concat('temp.scss'))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(plugins.rename(config.buildCssFilename))
-    .pipe(gulp.dest('./dist/'));
-});
-
 
 /////////////////////////////////////////////////////////////////////////////////////
 //
@@ -81,5 +67,5 @@ gulp.task('build-js', ['clean'], function() {
 //
 /////////////////////////////////////////////////////////////////////////////////////
 
-gulp.task('build', [ 'clean', 'build-css', 'jshint', 'build-js'], function() {
+gulp.task('build', [ 'clean', 'jshint', 'build-js'], function() {
 });
