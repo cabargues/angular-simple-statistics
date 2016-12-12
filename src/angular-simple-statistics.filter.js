@@ -14,8 +14,11 @@
     .module('cabargues.angularSimpleStatistics')
     .filter('ss', function(ss) {
       return function(array, method) {
-        // Simply call the specified method passing the array as argument
-        return ss[method](array);
+        // Create an array with the arguments except the function name
+        var args = Array.prototype.slice.call(arguments);
+        args.splice(1, 1);
+
+        return ss[method].apply(null, args);
       };
     });
 })();
